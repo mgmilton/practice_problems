@@ -23,7 +23,14 @@ class ScrabbleTest < Minitest::Test
   end
 
   def test_it_can_score_a_bonus
-    assert_equal 84, Scrabble.new.score("jazzman")
+    assert_equal 44, Scrabble.new.score("jazzman")
+  end
+
+  def test_score_with_multipliers_increases_score
+    assert_equal 6, Scrabble.new.score("nice")
+
+    assert_equal 12, Scrabble.new.score_with_multipliers("nice", 2)
+
   end
 
 end

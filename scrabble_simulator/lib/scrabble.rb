@@ -17,6 +17,10 @@ class Scrabble
     end
   end
 
+  def score_with_multipliers(word, int)
+    score(word) * int
+  end
+
   def point_values
     {
       "A"=>1, "B"=>3, "C"=>3, "D"=>2,
@@ -25,7 +29,7 @@ class Scrabble
       "M"=>3, "N"=>1, "O"=>1, "P"=>3,
       "Q"=>10, "R"=>1, "S"=>1, "T"=>1,
       "U"=>1, "V"=>4, "W"=>4, "X"=>8,
-      "Y"=>4, "Z"=>10, "BONUS" => 50
+      "Y"=>4, "Z"=>10, "BONUS" => 10
     }
   end
 end
