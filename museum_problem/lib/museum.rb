@@ -1,6 +1,6 @@
 class Museum
-  attr_reader :id,
-              :name
+  attr_reader :name
+  attr_accessor :id
 
   def initialize(arguments)
     @id   = arguments[:id]

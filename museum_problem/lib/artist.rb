@@ -1,9 +1,10 @@
 class Artist
-  attr_reader :id,
-              :name,
+  attr_reader :name,
               :born,
               :died,
               :country
+
+  attr_accessor :id
 
   def initialize(arguments)
     @id      = arguments[:id]
